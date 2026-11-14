@@ -1,0 +1,31 @@
+# MAS Consultancy — Apache rules (CMS version)
+
+# The blog now lives at blog.php; send any old .html link there.
+Redirect 301 /blog.html /blog.php
+
+# Homepage is PHP now.
+DirectoryIndex index.php index.html
+
+# Never serve the newsletter subscriber list
+<Files "subscribers.txt">
+    Require all denied
+</Files>
+
+# Never serve the config file (it holds the admin password hash)
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Data files and PHP includes are for the server only, never for browsers
+RedirectMatch 403 ^/(data|includes)/.*$
+
+# Never expose the git history
+RedirectMatch 403 ^/\.git(/.*)?$
+
+# Cache static assets for a week (safe: filenames change on redesign)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>

@@ -1,0 +1,90 @@
+/* MAS Consultancy — admin panel styles. Clean, light, green accent. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #14201a; --muted: #6b768f; --line: #e3e6ec; --bg: #f4f6f8;
+  --green: #1d4a32; --green-dark: #0e2418; --gold: #b18f3e;
+  --red: #b3261e; --red-bg: #fdecea; --ok: #1d6b3c; --ok-bg: #e6f4ea;
+  --warn-bg: #fef7e0; --warn-line: #f0d48a;
+}
+body { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+a { color: var(--green); }
+
+/* Top bar */
+.admin-top { background: var(--green-dark); color: #fff; padding: 0 28px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; position: sticky; top: 0; z-index: 10; }
+.admin-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.25rem; font-weight: 700; }
+.admin-brand em { font-style: italic; color: #d8bd7f; font-weight: 500; }
+.admin-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.admin-nav a { color: rgba(255,255,255,.82); text-decoration: none; font-size: .9rem; font-weight: 500; padding: 8px 13px; border-radius: 8px; }
+.admin-nav a:hover { background: rgba(255,255,255,.12); color: #fff; }
+.admin-nav a.active { background: var(--green); color: #fff; }
+
+/* Layout */
+.admin-main { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+.admin-main h1 { font-size: 1.7rem; margin-bottom: 6px; }
+.admin-main .lede { color: var(--muted); margin-bottom: 28px; }
+.admin-foot { text-align: center; color: var(--muted); font-size: .85rem; padding: 24px; border-top: 1px solid var(--line); }
+
+/* Alerts */
+.alert { padding: 13px 18px; border-radius: 10px; margin-bottom: 20px; font-size: .94rem; }
+.alert-success { background: var(--ok-bg); color: var(--ok); }
+.alert-error { background: var(--red-bg); color: var(--red); }
+.alert-warning { background: var(--warn-bg); border: 1px solid var(--warn-line); color: #7a5b12; }
+
+/* Cards + grids */
+.card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 26px; margin-bottom: 22px; box-shadow: 0 1px 4px rgba(20,32,26,.04); }
+.card h2 { font-size: 1.1rem; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 22px; }
+.stat-box { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.stat-box b { display: block; font-size: 2rem; line-height: 1.1; }
+.stat-box span { color: var(--muted); font-size: .86rem; }
+.quick-links { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #fff; border: none; border-radius: 9px; padding: 11px 20px; font-size: .92rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--green-dark); color: #fff; }
+.btn-outline { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+.btn-danger { background: var(--red); }
+.btn-danger:hover { background: #8f1d17; }
+.btn-sm { padding: 7px 13px; font-size: .84rem; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td .meta { color: var(--muted); font-size: .84rem; }
+.row-actions { display: flex; gap: 8px; white-space: nowrap; }
+.row-actions form { display: inline; }
+.empty { text-align: center; color: var(--muted); padding: 40px 16px; }
+.cat-tag { display: inline-block; background: #eef3f0; color: var(--green); border-radius: 999px; padding: 3px 11px; font-size: .78rem; font-weight: 600; }
+
+/* Forms */
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; }
+.field .hint { display: block; font-size: .82rem; font-weight: 400; color: var(--muted); margin-top: 4px; }
+.field input[type="text"], .field input[type="email"], .field input[type="password"],
+.field input[type="number"], .field input[type="date"], .field input[type="url"],
+.field select, .field textarea {
+  width: 100%; font: inherit; font-size: .95rem; padding: 11px 13px;
+  border: 1.5px solid var(--line); border-radius: 9px; background: #fff;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--green); }
+.field textarea { min-height: 90px; resize: vertical; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+fieldset { border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 18px; }
+fieldset legend { font-weight: 700; font-size: .92rem; padding: 0 8px; }
+
+/* Login */
+.login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.login-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 36px; width: 100%; max-width: 400px; box-shadow: 0 12px 40px rgba(20,32,26,.1); }
+.login-card h1 { font-family: Georgia, serif; text-align: center; margin-bottom: 4px; }
+.login-card .lede { text-align: center; }
+
+@media (max-width: 640px) {
+  .admin-top { height: auto; padding: 14px 18px; flex-direction: column; align-items: flex-start; }
+  .field-grid, .field-grid-3 { grid-template-columns: 1fr; }
+  .admin-main { padding: 24px 16px 48px; }
+  table { font-size: .86rem; }
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /subscribers.txt
+Disallow: /admin/
+Disallow: /data/
+
+Sitemap: https://masconsultancy.org/sitemap.xml
