@@ -160,6 +160,7 @@ a:hover { color: var(--green-900); }
 }
 .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; flex-shrink: 0; }
 .nav-logo img { height: 42px; width: auto; }
+.nav-logo .nav-wordmark { height: 42px; width: auto; }
 .nav-logo-text { font-family: var(--font-display); font-size: 1.32rem; font-weight: 650; color: var(--ink); letter-spacing: -.01em; }
 .nav-logo-text em { font-style: italic; color: var(--gold); font-weight: 500; }
 .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
@@ -701,6 +702,7 @@ a:hover { color: var(--green-900); }
   .section-head { margin-bottom: 44px; }
   .tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   .tab-btn { white-space: nowrap; }
+  .nav-logo .nav-wordmark { height: 30px; }
 }
 
 /* Respect reduced motion */

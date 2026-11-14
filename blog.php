@@ -33,8 +33,7 @@ $about   = $site['about'] ?? [];
   <header class="navbar navbar-solid" id="navbar">
     <div class="nav-inner">
       <a href="index.php" class="nav-logo" aria-label="MAS Consultancy — home">
-        <img src="logo.png" alt="MAS Consultancy logo" height="45">
-        <span class="nav-logo-text">MAS <em>Consultancy</em></span>
+        <img src="logo-wordmark.png" alt="MAS Consultancy" class="nav-wordmark" height="42">
       </a>
       <nav aria-label="Primary">
         <ul class="nav-links" id="navLinks">
