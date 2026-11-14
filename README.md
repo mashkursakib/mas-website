@@ -47,23 +47,23 @@ sitemap.xml         Sitemap for Google/Bing
 .htaccess           Redirects + access protection (needs AllowOverride All)
 ```
 
-## Email setup (SMTP)
+## Email setup (Resend)
 
-PHP `mail()` has no mail server inside the Docker image, so the contact and
-newsletter forms send through SMTP (`includes/smtp.php`, no dependencies).
-Set these environment variables on the Render service (Dashboard →
-mas-website → Environment). Never commit credentials — this repo is public.
+Render blocks outbound SMTP (ports 465 and 587 both time out from the
+service), so the contact and newsletter forms send through the Resend
+HTTPS API (`includes/mailer.php`, no dependencies). Set this environment
+variable on the Render service (Dashboard → mas-website → Environment).
+Never commit the key — this repo is public.
 
 ```
-SMTP_HOST=mail.spacemail.com
-SMTP_PORT=465
-SMTP_SECURE=ssl
-SMTP_USER=info@masconsultancy.org
-SMTP_PASS=<the mailbox password — Spacemail webmail login, not the Spaceship account password>
-SMTP_FROM_NAME=MAS Website
+RESEND_API_KEY=re_...   (from resend.com/api-keys)
+RESEND_FROM=MAS Website <info@masconsultancy.org>   (optional; this is the default)
 ```
 
-Port 465 uses implicit TLS; port 587 with `SMTP_SECURE=tls` (STARTTLS) also
-works. If SMTP is ever unreachable, the contact form shows an error to the
-visitor (and logs it); newsletter signups are still saved to
-`subscribers.txt`.
+Before sending works, verify masconsultancy.org in Resend (Domains → Add
+Domain) and add the DNS records it shows (SPF/DKIM) at Spaceship — if an
+SPF record already exists, merge Resend's include into it instead of
+adding a second one. The free plan covers 3,000 emails/month, max
+100/day. If the API key is missing or sending fails, the contact form
+shows an error to the visitor (and logs it); newsletter signups are
+still saved to `subscribers.txt`.

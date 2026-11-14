@@ -6,7 +6,7 @@
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/includes/functions.php';
-require_once __DIR__ . '/includes/smtp.php';
+require_once __DIR__ . '/includes/mailer.php';
 $site = load_site();
 $TO = $site['site']['email_to'] ?? 'info@masconsultancy.org'; // set in Admin > Site Settings
 $SUBJECT_PREFIX = '[MAS Website] ';
@@ -58,7 +58,7 @@ $body = "New enquiry from masconsultancy.org\n\n"
     . "Service: $service\n\n"
     . "Message:\n$message\n";
 
-$result = send_mail_smtp($TO, $SUBJECT_PREFIX . $service . ' — ' . $name, $body, $email);
+$result = send_site_mail($TO, $SUBJECT_PREFIX . $service . ' — ' . $name, $body, $email);
 if ($result['ok']) {
     echo json_encode(['ok' => true]);
 } else {
