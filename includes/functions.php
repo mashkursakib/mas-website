@@ -96,6 +96,10 @@ function post_card_html(array $post): string
 {
     $url = !empty($post['url']) ? $post['url'] : 'blog.php';
     $img = !empty($post['image']) ? $post['image'] : 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80';
+    // Cards display ~400px wide: serve a smaller Unsplash variant to keep the page light (the article hero keeps the full-size image).
+    if (strpos($img, 'images.unsplash.com/') !== false) {
+        $img = preg_replace('/([?&])w=\d+/', '$1w=800', $img);
+    }
     $html  = '<article class="news-card" data-category="' . e($post['category'] ?? '') . '">';
     $html .= '<img src="' . e($img) . '" alt="" loading="lazy">';
     $html .= '<div class="news-card-body">';
