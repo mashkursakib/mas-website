@@ -66,6 +66,20 @@ function rich(?string $s): string
     return strip_tags((string) $s, '<strong><em><br><a>');
 }
 
+// Article body HTML: allow headings, lists and basic inline formatting.
+function article_html(?string $s): string
+{
+    return strip_tags((string) $s, '<h2><h3><p><ul><ol><li><strong><em><a><br><blockquote>');
+}
+
+// URL-friendly slug from a title: "Hello World!" -> "hello-world".
+function slugify(string $s): string
+{
+    $s = strtolower(trim($s));
+    $s = preg_replace('/[^a-z0-9]+/', '-', $s);
+    return trim((string) $s, '-');
+}
+
 function post_category_label(string $key): string
 {
     return POST_CATEGORIES[$key] ?? ucfirst(str_replace('-', ' ', $key));
