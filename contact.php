@@ -6,6 +6,7 @@
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/includes/functions.php';
+require_once __DIR__ . '/includes/smtp.php';
 $site = load_site();
 $TO = $site['site']['email_to'] ?? 'info@masconsultancy.org'; // set in Admin > Site Settings
 $SUBJECT_PREFIX = '[MAS Website] ';
@@ -57,13 +58,11 @@ $body = "New enquiry from masconsultancy.org\n\n"
     . "Service: $service\n\n"
     . "Message:\n$message\n";
 
-$headers = "From: MAS Website <noreply@masconsultancy.org>\r\n"
-    . "Reply-To: $email\r\n"
-    . "Content-Type: text/plain; charset=UTF-8\r\n";
-
-if (mail($TO, $SUBJECT_PREFIX . $service . ' — ' . $name, $body, $headers)) {
+$result = send_mail_smtp($TO, $SUBJECT_PREFIX . $service . ' — ' . $name, $body, $email);
+if ($result['ok']) {
     echo json_encode(['ok' => true]);
 } else {
+    error_log('MAS contact form mail failed: ' . $result['error']);
     http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Mail could not be sent.']);
+    echo json_encode(['ok' => false, 'error' => 'Mail could not be sent. Please try again later.']);
 }

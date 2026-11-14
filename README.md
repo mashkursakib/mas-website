@@ -47,8 +47,23 @@ sitemap.xml         Sitemap for Google/Bing
 .htaccess           Redirects + access protection (needs AllowOverride All)
 ```
 
-## Known TODO
+## Email setup (SMTP)
 
-- **Contact form email:** PHP `mail()` has no mail server inside the Docker
-  image, so form submissions currently fail to send. Wire `contact.php` /
-  `newsletter.php` to SMTP (e.g. Spacemail) to make enquiries arrive.
+PHP `mail()` has no mail server inside the Docker image, so the contact and
+newsletter forms send through SMTP (`includes/smtp.php`, no dependencies).
+Set these environment variables on the Render service (Dashboard →
+mas-website → Environment). Never commit credentials — this repo is public.
+
+```
+SMTP_HOST=mail.spacemail.com
+SMTP_PORT=465
+SMTP_SECURE=ssl
+SMTP_USER=info@masconsultancy.org
+SMTP_PASS=<the mailbox password — Spacemail webmail login, not the Spaceship account password>
+SMTP_FROM_NAME=MAS Website
+```
+
+Port 465 uses implicit TLS; port 587 with `SMTP_SECURE=tls` (STARTTLS) also
+works. If SMTP is ever unreachable, the contact form shows an error to the
+visitor (and logs it); newsletter signups are still saved to
+`subscribers.txt`.

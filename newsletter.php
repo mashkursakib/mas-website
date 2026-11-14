@@ -6,6 +6,7 @@
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/includes/functions.php';
+require_once __DIR__ . '/includes/smtp.php';
 $site = load_site();
 $TO = $site['site']['email_to'] ?? 'info@masconsultancy.org'; // set in Admin > Site Settings
 $STORE = __DIR__ . '/subscribers.txt'; // keep this file private (see README / .htaccess)
@@ -29,8 +30,9 @@ $line = date('Y-m-d H:i:s') . ' | ' . $email . PHP_EOL;
 @file_put_contents($STORE, $line, FILE_APPEND | LOCK_EX);
 
 $body = "New newsletter signup from masconsultancy.org\n\nEmail: $email\n";
-$headers = "From: MAS Website <noreply@masconsultancy.org>\r\n"
-    . "Content-Type: text/plain; charset=UTF-8\r\n";
-@mail($TO, '[MAS Website] New newsletter subscriber', $body, $headers);
-
+$result = send_mail_smtp($TO, '[MAS Website] New newsletter subscriber', $body);
+if (!$result['ok']) {
+    error_log('MAS newsletter mail failed: ' . $result['error']);
+}
+// The signup is saved in subscribers.txt either way.
 echo json_encode(['ok' => true]);
