@@ -725,7 +725,7 @@ $about   = $site['about'] ?? [];
         <a href="tel:<?php echo e($contact['phone_tel'] ?? ''); ?>"><?php echo e($contact['phone_display'] ?? ''); ?></a>
       </div>
     </div>
-    <div class="footer-wordmark" aria-hidden="true">MAS Consultancy</div>
+    <div class="footer-wordmark" aria-hidden="true"><img src="logo-m-outline.png" alt="" class="footer-wordmark-m">AS Consultancy</div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span id="year">2026</span> MAS Consultancy. Licensed under MAS Corporation. All rights reserved.</p>

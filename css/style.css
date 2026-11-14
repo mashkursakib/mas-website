@@ -613,6 +613,7 @@ a:hover { color: var(--green-900); }
   color: transparent; -webkit-text-stroke: 1px rgba(216,189,127,.4);
   user-select: none; padding: 10px 16px 0; white-space: nowrap;
 }
+.footer-wordmark-m { display: inline-block; height: .7em; width: auto; vertical-align: baseline; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; }
 .footer-bottom-inner {
   display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
