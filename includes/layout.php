@@ -5,6 +5,14 @@
 
 require_once __DIR__ . '/functions.php';
 
+// Cache-busting version for a static asset: its modification time, so a
+// redeploy always gives browsers a fresh URL instead of a cached file.
+function asset_v(string $rel): string
+{
+    $m = @filemtime(__DIR__ . '/../' . $rel);
+    return $m ? $rel . '?v=' . $m : $rel;
+}
+
 // Tab-bar navigation: key => [url, label, children?]. Order is the tab order.
 // Children are [url, label, external?] and render as a dropdown under the tab.
 function nav_items(): array
@@ -65,7 +73,7 @@ function page_head(array $opts): void
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="<?php echo e(asset_v('css/style.css')); ?>">
   <?php echo $extra; ?>
 </head>
 <body>
@@ -228,7 +236,7 @@ function site_footer(): void
   </a>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
 
-  <script src="js/main.js"></script>
+  <script src="<?php echo e(asset_v('js/main.js')); ?>"></script>
 </body>
 </html>
 <?php
