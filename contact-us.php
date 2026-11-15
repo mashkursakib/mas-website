@@ -5,7 +5,7 @@ $contact = $site['contact'] ?? [];
 
 page_head([
     'title'       => 'Contact MAS Consultancy | Email, Phone & WhatsApp',
-    'description' => 'Contact MAS Group: 73, Eastern Commercial Complex, Kakrail, Dhaka. Email info@masconsultancy.org, call or WhatsApp +880 1913 876636. We reply within 24 hours on business days.',
+    'description' => 'Contact MAS Group: 73, Eastern Commercial Complex, Kakrail, Dhaka. Email info@masconsultancy.org or WhatsApp +880 1913 876636.',
     'canonical'   => 'https://masconsultancy.org/contact-us.php',
 ]);
 site_header('contact', true);

@@ -6,15 +6,15 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'Service',
     'name' => 'E-Procurement Services in Bangladesh',
-    'description' => 'MAS Corporation manages the full public procurement process in Bangladesh — tender tracking, eligibility checks, BOQ pricing, double-verified compliance and early submission, with an 86% bid success rate across 175+ projects.',
+    'description' => 'MAS Corporation manages public procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
     'provider' => ['@type' => 'Organization', 'name' => 'MAS Corporation', 'url' => 'https://masconsultancy.org/e-procurement.php'],
     'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
     'url' => 'https://masconsultancy.org/e-procurement.php',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
 
 page_head([
-    'title'       => 'E-Procurement in Bangladesh | MAS Corporation — 86% Bid Success',
-    'description' => 'MAS Corporation manages the full public procurement process in Bangladesh — tender tracking, eligibility checks, BOQ pricing, double-verified compliance and early submission, with an 86% bid success rate across 175+ projects.',
+    'title'       => 'E-Procurement | MAS Corporation — 86% Bid Success',
+    'description' => 'MAS Corporation manages public procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
     'canonical'   => 'https://masconsultancy.org/e-procurement.php',
     'extra'       => $extra,
 ]);
@@ -58,10 +58,10 @@ site_header('e-procurement', true);
       </div>
       <div class="process-grid">
         <div class="process-step reveal"><span class="process-num">01</span><h3>Tender Tracking</h3><p>Continuous monitoring of Bangladesh&apos;s public procurement portals, so suitable opportunities are never missed.</p></div>
-        <div class="process-step reveal"><span class="process-num">02</span><h3>Eligibility Checks</h3><p>Every opportunity is screened against your licences, experience, and capacity before any time or money is spent on a bid.</p></div>
+        <div class="process-step reveal"><span class="process-num">02</span><h3>Eligibility Checks</h3><p>Every opportunity is screened against your licenses, experience, and capacity before any time or money is spent on a bid.</p></div>
         <div class="process-step reveal"><span class="process-num">03</span><h3>Full Document Review</h3><p>Tender documents are reviewed in full and turned into clear checklists, so every requirement is visible and nothing is left to assumption.</p></div>
         <div class="process-step reveal"><span class="process-num">04</span><h3>Realistic BOQ Pricing</h3><p>Prices are built from the bill of quantities and actual costs — bids that are competitive and deliverable, not guesswork.</p></div>
-        <div class="process-step reveal"><span class="process-num">05</span><h3>Compliance Verified Twice</h3><p>Licences, certificates, and bank documents are checked twice before submission, because a single missing paper can disqualify an otherwise winning bid.</p></div>
+        <div class="process-step reveal"><span class="process-num">05</span><h3>Compliance Verified Twice</h3><p>Licenses, certificates, and bank documents are checked twice before submission, because a single missing paper can disqualify an otherwise winning bid.</p></div>
         <div class="process-step reveal"><span class="process-num">06</span><h3>Early Submission</h3><p>Bids go in well before the deadline, leaving room to resolve any portal or document issue without risk.</p></div>
       </div>
     </div>
@@ -104,7 +104,7 @@ site_header('e-procurement', true);
               <li>Roads &amp; highways</li>
               <li>Water development</li>
               <li>Public health engineering</li>
-              <li>Education &amp; health programmes</li>
+              <li>Education &amp; health programs</li>
             </ul>
           </div>
         </div>

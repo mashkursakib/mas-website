@@ -6,7 +6,7 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'Service',
     'name' => 'Web & App Development',
-    'description' => 'MAS Communication designs, builds, and maintains websites and web applications — business sites, e-commerce stores, enterprise portals and mobile apps — for clients in Bangladesh and abroad.',
+    'description' => 'MAS Communication designs, builds, and maintains websites and web apps — business sites, e-commerce stores, portals and mobile apps.',
     'provider' => ['@type' => 'Organization', 'name' => 'MAS Communication', 'url' => 'https://masconsultancy.org/web-it.php'],
     'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
     'url' => 'https://masconsultancy.org/web-it.php',
@@ -14,7 +14,7 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
 
 page_head([
     'title'       => 'Web & App Development in Bangladesh | MAS Communication',
-    'description' => 'MAS Communication designs, builds, and maintains websites and web applications — business sites, e-commerce stores, enterprise portals and mobile apps — for clients in Bangladesh and abroad.',
+    'description' => 'MAS Communication designs, builds, and maintains websites and web apps — business sites, e-commerce stores, portals and mobile apps.',
     'canonical'   => 'https://masconsultancy.org/web-it.php',
     'extra'       => $extra,
 ]);
@@ -113,7 +113,7 @@ site_header('web-it', true);
       <ol class="journey">
         <li class="journey-step reveal">
           <span class="journey-num">01</span>
-          <div><h3>Brief &amp; Goals</h3><p>We start from what the site has to achieve — enquiries, sales, credibility — and agree the scope before design begins.</p></div>
+          <div><h3>Brief &amp; Goals</h3><p>We start from what the site has to achieve — inquiries, sales, credibility — and agree the scope before design begins.</p></div>
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">02</span>

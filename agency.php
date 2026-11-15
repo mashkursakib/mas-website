@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/layout.php';
 
 page_head([
     'title'       => 'MAS Hybrid Agency | AI-Driven Marketing for US Businesses',
-    'description' => 'MAS Hybrid Agency is the MAS Group\'s US marketing arm: a full-service agency with an AI layer — the MAS Marketing Brain — that shows you exactly what your marketing does, every morning. Probe-first, no sales calls, everything in writing.',
+    'description' => 'MAS Hybrid Agency is the MAS Group\'s US marketing arm — a full-service agency with an AI layer that shows what your marketing does, every morning.',
     'canonical'   => 'https://masconsultancy.org/agency.php',
 ]);
 site_header('agency', true);
@@ -49,7 +49,7 @@ site_header('agency', true);
         <article class="card reveal">
           <div class="card-icon" aria-hidden="true">✉️</div>
           <h3>CRM &amp; Email Follow-Up</h3>
-          <p>Every lead answered fast and followed up properly, so no enquiry goes cold — automated sequences with a human behind them.</p>
+          <p>Every lead answered fast and followed up properly, so no inquiry goes cold — automated sequences with a human behind them.</p>
         </article>
         <article class="card reveal">
           <div class="card-icon" aria-hidden="true">🧠</div>

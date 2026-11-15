@@ -35,8 +35,8 @@ $jsonLd = '
   </script>';
 
 page_head([
-    'title'       => 'MAS Consultancy | E-Procurement, Web Development & Business Setup',
-    'description' => 'MAS Consultancy — Licensed under MAS Corporation. Three specialized firms for e-procurement, IT & web development, and market entry. Serving US businesses since 2021.',
+    'title'       => 'MAS Consultancy | E-Procurement, Web & Business Setup',
+    'description' => 'MAS Consultancy — three specialized firms for e-procurement, web development, and market entry. Serving US businesses since 2021.',
     'canonical'   => 'https://masconsultancy.org/',
     'extra'       => $jsonLd,
 ]);
@@ -97,7 +97,7 @@ site_header('home');
       <div class="section-head reveal">
         <p class="eyebrow">About Us</p>
         <h2 class="section-title">One Group. Three Specialized Firms. <span class="accent">Complete Solutions.</span></h2>
-        <p class="section-sub">Three specialised firms, 175+ projects delivered. Each one leads its own field — and one team coordinates all three for you, so you deal with a single partner from first conversation to finished work.</p>
+        <p class="section-sub">Three specialized firms, 175+ projects delivered. Each one leads its own field — and one team coordinates all three for you, so you deal with a single partner from first conversation to finished work.</p>
       </div>
       <div class="cards-grid">
         <article class="card reveal">
@@ -209,7 +209,7 @@ site_header('home');
   </section>
 
   <!-- ============ NEWS PREVIEW ============ -->
-  <section class="section section-alt" id="news">
+  <section class="section section-alt section-slim" id="news">
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">News &amp; Insights</p>

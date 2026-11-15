@@ -29,7 +29,7 @@ site_header('privacy', true);
 
       <h2>How we use your information</h2>
       <ul>
-        <li>To respond to your enquiries and provide the services you ask about.</li>
+        <li>To respond to your inquiries and provide the services you ask about.</li>
         <li>To send our newsletter and business updates, only if you subscribed. Every newsletter includes an unsubscribe option.</li>
         <li>To improve our website and services, using aggregated analytics data.</li>
         <li>To meet legal obligations and protect our business against misuse.</li>
@@ -43,7 +43,7 @@ site_header('privacy', true);
       <p>Our website uses cookies for Google Analytics and for the basic functioning of the site. You can block or delete cookies in your browser settings; the site will still work, though some features may behave differently. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
 
       <h2>How long we keep it</h2>
-      <p>Contact-form messages are kept for as long as needed to handle your enquiry and maintain a business record. Newsletter subscriptions are kept until you unsubscribe. Analytics data is retained according to Google Analytics settings.</p>
+      <p>Contact-form messages are kept for as long as needed to handle your inquiry and maintain a business record. Newsletter subscriptions are kept until you unsubscribe. Analytics data is retained according to Google Analytics settings.</p>
 
       <h2>Your rights</h2>
       <p>You may ask us at any time to show you the personal information we hold about you, correct it, or delete it. To make a request, email <a href="mailto:info@masconsultancy.org">info@masconsultancy.org</a> and we will respond within a reasonable time. You may also unsubscribe from the newsletter at any time using the link in any email we send.</p>

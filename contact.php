@@ -50,7 +50,7 @@ foreach ([$name, $email, $service] as $field) {
     }
 }
 
-$body = "New enquiry from masconsultancy.org\n\n"
+$body = "New inquiry from masconsultancy.org\n\n"
     . "Name:    $name\n"
     . "Email:   $email\n"
     . "Company: " . ($company !== '' ? $company : '-') . "\n"

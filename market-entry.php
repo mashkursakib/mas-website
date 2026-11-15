@@ -6,15 +6,15 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'Service',
     'name' => 'Business Setup & Market Entry in Bangladesh',
-    'description' => 'MAS Consultancy helps foreign companies establish and run a legal, working presence in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing, in six guided steps.',
+    'description' => 'MAS Consultancy helps foreign companies set up and run in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing.',
     'provider' => ['@type' => 'Organization', 'name' => 'MAS Consultancy', 'url' => 'https://masconsultancy.org/market-entry.php'],
     'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
     'url' => 'https://masconsultancy.org/market-entry.php',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
 
 page_head([
-    'title'       => 'Start a Business in Bangladesh | MAS Consultancy — Market Entry',
-    'description' => 'MAS Consultancy helps foreign companies establish and run a legal, working presence in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing, in six guided steps.',
+    'title'       => 'Start a Business in Bangladesh | MAS Consultancy',
+    'description' => 'MAS Consultancy helps foreign companies set up and run in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing.',
     'canonical'   => 'https://masconsultancy.org/market-entry.php',
     'extra'       => $extra,
 ]);
@@ -45,7 +45,7 @@ site_header('market-entry', true);
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">02</span>
-          <div><h3>Company Registration &amp; Licensing</h3><p>Full management of RJSC incorporation from name clearance to registration, BIDA registration including branch and liaison office approvals for foreign companies, trade licence, TIN and VAT registration, and all sector-specific permits required to operate.</p></div>
+          <div><h3>Company Registration &amp; Licensing</h3><p>Full management of RJSC incorporation from name clearance to registration, BIDA registration including branch and liaison office approvals for foreign companies, trade license, TIN and VAT registration, and all sector-specific permits required to operate.</p></div>
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">03</span>

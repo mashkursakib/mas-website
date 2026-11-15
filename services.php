@@ -2,8 +2,8 @@
 require_once __DIR__ . '/includes/layout.php';
 
 page_head([
-    'title'       => 'Services | MAS Group — E-Procurement, Web & IT, Market Entry, Lead Generation',
-    'description' => 'Seven service lines across the MAS Group: e-procurement management, web & app development, foreign business setup, IT infrastructure, security & compliance, digital transformation, and B2B lead generation.',
+    'title'       => 'Services | MAS Group — E-Procurement, Web & IT',
+    'description' => 'Seven service lines across MAS Group: e-procurement, web & app development, business setup, IT infrastructure, security, and B2B lead generation.',
     'canonical'   => 'https://masconsultancy.org/services.php',
 ]);
 site_header('services', true);
@@ -55,7 +55,7 @@ site_header('services', true);
           <p>One guided sequence takes you from first meeting to fully operational: registration, approvals, licensing, office, staffing, and banking. One local team knows which approval comes before which, so nothing stalls.</p>
           <ul class="check-list">
             <li>RJSC registration &amp; BIDA approval</li>
-            <li>Trade licence, TIN &amp; VAT</li>
+            <li>Trade license, TIN &amp; VAT</li>
             <li>Corporate bank account support</li>
             <li>Office setup &amp; local staffing</li>
           </ul>
@@ -149,8 +149,8 @@ site_header('services', true);
           </article>
           <article class="concern-panel" id="c3" role="tabpanel">
             <p class="concern-tag">Web Development</p>
-            <h3>A website that brings no enquiries is just a brochure</h3>
-            <p>We build sites around what they have to achieve — enquiries, sales, credibility — then design, build, and maintain them. Every build is responsive, structured for search engines, and fast, and your team can update it without developer help.</p>
+            <h3>A website that brings no inquiries is just a brochure</h3>
+            <p>We build sites around what they have to achieve — inquiries, sales, credibility — then design, build, and maintain them. Every build is responsive, structured for search engines, and fast, and your team can update it without developer help.</p>
             <a href="web-it.php" class="btn btn-outline-light btn-sm">See web services</a>
           </article>
           <article class="concern-panel" id="c4" role="tabpanel">

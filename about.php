@@ -5,7 +5,7 @@ $about = $site['about'] ?? [];
 
 page_head([
     'title'       => 'About MAS Group | Built for International Business',
-    'description' => 'Founded in Dhaka in 2021, MAS Group is three specialised firms — e-procurement, web & IT, and market entry — working as one accountable team for international business in Bangladesh.',
+    'description' => 'Founded in 2021, MAS Group is three specialized firms — e-procurement, web & IT, and market entry — working as one accountable team.',
     'canonical'   => 'https://masconsultancy.org/about.php',
 ]);
 site_header('about', true);

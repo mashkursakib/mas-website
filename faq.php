@@ -7,7 +7,7 @@ $contact = $site['contact'] ?? [];
 $faqPairs = [
     ['What is the MAS Group, and how are the three firms different?', 'MAS Consultancy is a licensed group of companies under MAS Corporation. MAS Corporation handles e-procurement, MAS Communication delivers web development and IT solutions, and MAS Consultancy provides end-to-end support for international businesses expanding into Bangladesh. One team coordinates all three for you.'],
     ['Which e-procurement portals do you work with?', 'We work across e-GP Bangladesh, CPTU, the BMET Portal, DESCO Procurement, BIWTA, and LGED tenders — covering government, utility, transport, and engineering contracts.'],
-    ['What does setting up a business in Bangladesh involve?', 'Six steps: market research and feasibility, company registration and licensing (RJSC, BIDA, trade licence, TIN/BIN), office setup and infrastructure, local staffing, banking and financial setup, and ongoing support and compliance. We manage the full journey.'],
+    ['What does setting up a business in Bangladesh involve?', 'Six steps: market research and feasibility, company registration and licensing (RJSC, BIDA, trade license, TIN/BIN), office setup and infrastructure, local staffing, banking and financial setup, and ongoing support and compliance. We manage the full journey.'],
     ['Do you work with US-based businesses?', 'Yes — US businesses are our core focus. We serve 52+ US clients, from market entry and company setup to web development and e-procurement support, and our team works across US time zones.'],
     ['Do you offer lead generation or appointment setting?', 'Yes. Our team offers B2B lead generation, LinkedIn outreach, and appointment setting for international firms building a sales pipeline — delivered to agreed targets, with regular reporting.'],
     ['How do we start working together?', 'Tell us what you are planning — through the contact form, email, or WhatsApp. We reply within 24 hours on business days with next steps and any questions, then a short scoping conversation before any proposal.'],
@@ -23,8 +23,8 @@ foreach ($faqPairs as [$q, $a]) {
 $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode(['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $faqEntities], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
 
 page_head([
-    'title'       => 'FAQ | MAS Consultancy — E-Procurement, Business Setup & Services',
-    'description' => 'Frequently asked questions about MAS Group: the three firms, e-procurement portals, setting up a business in Bangladesh, lead generation, pricing, timelines, and how to get started.',
+    'title'       => 'FAQ | MAS Consultancy — Tenders, Setup & Services',
+    'description' => 'Frequently asked questions about MAS Group: the three firms, e-procurement, business setup, lead generation, pricing, and how to get started.',
     'canonical'   => 'https://masconsultancy.org/faq.php',
     'extra'       => $extra,
 ]);
@@ -54,7 +54,7 @@ site_header('faq', true);
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">What does setting up a business in Bangladesh involve? <span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Six steps: market research and feasibility, company registration and licensing (RJSC, BIDA, trade licence, TIN/BIN), office setup and infrastructure, local staffing, banking and financial setup, and ongoing support and compliance. We manage the full journey — see <a href="market-entry.php">Market Entry</a>.</p></div>
+          <div class="faq-a"><p>Six steps: market research and feasibility, company registration and licensing (RJSC, BIDA, trade license, TIN/BIN), office setup and infrastructure, local staffing, banking and financial setup, and ongoing support and compliance. We manage the full journey — see <a href="market-entry.php">Market Entry</a>.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Do you work with US-based businesses? <span class="faq-icon">+</span></button>

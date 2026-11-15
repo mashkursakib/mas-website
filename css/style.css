@@ -69,7 +69,8 @@ a:hover { color: var(--green-900); }
 /* ---------- Layout helpers ---------- */
 .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
 .container-narrow { max-width: 860px; }
-.section { padding: 120px 0; position: relative; }
+.section { padding: 96px 0; position: relative; }
+.section-slim { padding: 64px 0; }
 .section-alt { background: var(--paper-warm); }
 .section-dark {
   background:
@@ -259,7 +260,7 @@ a:hover { color: var(--green-900); }
   border-radius: var(--radius-lg) var(--radius-lg) 0 0; box-shadow: var(--shadow-lg);
 }
 .hero-chip {
-  position: absolute; top: 24px; right: 56px; z-index: 2;
+  position: absolute; top: 24px; left: 50%; transform: translateX(-50%); z-index: 2;
   background: rgba(255,255,255,.94); backdrop-filter: blur(10px);
   border-radius: var(--radius); box-shadow: var(--shadow-md);
   padding: 18px 24px; display: flex; align-items: center; gap: 16px; text-align: left;
@@ -378,6 +379,11 @@ a:hover { color: var(--green-900); }
 
 /* ---------- Cards grid (services / portfolio) ---------- */
 .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+/* A lone card on the last row sits in the middle column instead of
+   hanging alone on the left (e.g. 7 cards in a 3-column grid). */
+@media (min-width: 1101px) {
+  .cards-grid > .card:last-child:nth-child(3n+1) { grid-column: 2; }
+}
 .card {
   background: transparent; border: 1px solid var(--line); border-radius: var(--radius);
   padding: 36px 32px; position: relative; overflow: hidden;
@@ -623,9 +629,9 @@ a:hover { color: var(--green-900); }
 .footer-col a:hover { color: var(--gold-light); }
 .footer-wordmark {
   font-family: var(--font-display); font-weight: 600; text-align: center;
-  font-size: clamp(3rem, 11vw, 9.5rem); line-height: .95; letter-spacing: -.02em;
+  font-size: clamp(2.6rem, 9.5vw, 9.5rem); line-height: .95; letter-spacing: -.02em;
   color: transparent; -webkit-text-stroke: 1px rgba(216,189,127,.4);
-  user-select: none; padding: 10px 16px 0; white-space: nowrap;
+  user-select: none; padding: 10px 16px 8px; white-space: nowrap;
 }
 .footer-wordmark-m { display: inline-block; height: .7em; width: auto; vertical-align: baseline; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; }
@@ -676,8 +682,16 @@ a:hover { color: var(--green-900); }
   .nav-hamburger { display: flex; }
 }
 
+/* Below ~1400px the page container is near full-width, so the fixed
+   WhatsApp / back-to-top buttons sit over the footer links. Give the
+   footer bottom row enough room to clear them. */
+@media (max-width: 1400px) {
+  .footer-bottom-inner { padding-bottom: 108px; }
+}
+
 @media (max-width: 1100px) {
   .cards-grid, .news-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid > .card:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .split-grid, .concerns-wrap, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-badge-card { right: 12px; }
@@ -686,11 +700,12 @@ a:hover { color: var(--green-900); }
   .tab-panel-metric { text-align: left; }
   .tab-panel-metric span { display: inline; font-size: 2.1rem; margin-right: 8px; }
   .concerns-detail { position: static; }
-  .hero-chip { right: 48px; top: 20px; }
+  .hero-chip { top: 20px; }
 }
 
 @media (max-width: 900px) {
-  .section { padding: 84px 0; }
+  .section { padding: 64px 0; }
+  .section-slim { padding: 48px 0; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 0; }
   .stat:nth-child(3) { border-left: none; padding-left: 0; }
   .stat:nth-child(n+3) { padding-top: 0; }
@@ -705,7 +720,8 @@ a:hover { color: var(--green-900); }
   .newsletter-form .btn { width: 100%; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
-  .hero-meta { gap: 24px; }
+  .hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .hero-badge { font-size: .68rem; letter-spacing: .1em; white-space: nowrap; }
   .hero-chip { position: static; margin: 16px 20px 0; }
   .hero-figure { margin-top: 40px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }

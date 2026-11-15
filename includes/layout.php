@@ -120,7 +120,7 @@ function site_header(string $active, bool $solid = false): void
 function newsletter_block(): void
 {
     ?>
-  <section class="section section-alt" id="newsletter">
+  <section class="section section-alt section-slim" id="newsletter">
     <div class="container container-narrow">
       <div class="newsletter-box reveal">
         <p class="eyebrow">Stay Updated</p>

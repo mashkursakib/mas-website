@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/layout.php';
 
 page_head([
     'title'       => 'Our Work | MAS Group — Selected Engagements',
-    'description' => 'Selected engagements from across the MAS Group: government tenders won, websites and stores built, and foreign companies set up in Bangladesh. Client names withheld for confidentiality.',
+    'description' => 'Selected MAS Group engagements: government tenders won, websites and stores built, and foreign companies set up. Client names withheld.',
     'canonical'   => 'https://masconsultancy.org/portfolio.php',
 ]);
 site_header('portfolio', true);
@@ -26,7 +26,7 @@ site_header('portfolio', true);
           <div class="card-icon" aria-hidden="true">📋</div>
           <p class="card-kicker">MAS Corporation &middot; Works Tender</p>
           <h3>Infrastructure Works Tender</h3>
-          <p><strong>What MAS did:</strong> Tracked the opportunity on e-GP, screened the client against the eligibility criteria, turned the full tender document into a working checklist, priced the bill of quantities from real costs, verified licences, certificates, and bank documents twice, and submitted well ahead of the deadline.</p>
+          <p><strong>What MAS did:</strong> Tracked the opportunity on e-GP, screened the client against the eligibility criteria, turned the full tender document into a working checklist, priced the bill of quantities from real costs, verified licenses, certificates, and bank documents twice, and submitted well ahead of the deadline.</p>
           <p><strong>Outcome:</strong> Contract awarded on a compliant, realistically priced bid.</p>
         </article>
         <article class="card reveal">
@@ -54,7 +54,7 @@ site_header('portfolio', true);
           <div class="card-icon" aria-hidden="true">🌏</div>
           <p class="card-kicker">MAS Consultancy &middot; New Entity</p>
           <h3>Full Foreign Company Setup</h3>
-          <p><strong>What MAS did:</strong> Handled the complete sequence end to end — RJSC incorporation from name clearance to registration, BIDA registration, trade licence, TIN and VAT registration, corporate bank account support, and practical office setup.</p>
+          <p><strong>What MAS did:</strong> Handled the complete sequence end to end — RJSC incorporation from name clearance to registration, BIDA registration, trade license, TIN and VAT registration, corporate bank account support, and practical office setup.</p>
           <p><strong>Outcome:</strong> A fully registered, licensed, and banked company, ready to trade from day one.</p>
         </article>
         <article class="card reveal">
