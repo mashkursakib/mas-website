@@ -6,7 +6,7 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'Service',
     'name' => 'E-Procurement Services in Bangladesh',
-    'description' => 'MAS Corporation manages public procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
+    'description' => 'MAS Corporation manages procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
     'provider' => ['@type' => 'Organization', 'name' => 'MAS Corporation', 'url' => 'https://masconsultancy.org/e-procurement.php'],
     'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
     'url' => 'https://masconsultancy.org/e-procurement.php',
@@ -14,7 +14,7 @@ $extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
 
 page_head([
     'title'       => 'E-Procurement | MAS Corporation — 86% Bid Success',
-    'description' => 'MAS Corporation manages public procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
+    'description' => 'MAS Corporation manages procurement end to end — tender tracking, eligibility checks, BOQ pricing, verified compliance — with an 86% bid success rate.',
     'canonical'   => 'https://masconsultancy.org/e-procurement.php',
     'extra'       => $extra,
 ]);
