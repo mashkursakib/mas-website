@@ -62,6 +62,26 @@
   $$('#mobileMenu a').forEach((a) => a.addEventListener('click', () => openMenu(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') openMenu(false); });
 
+  /* ---------- Nav dropdown (desktop) ---------- */
+  const dropdownToggles = $$('.dropdown-toggle');
+  dropdownToggles.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const item = btn.closest('.has-dropdown');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+  const closeDropdowns = () => {
+    $$('.has-dropdown.open').forEach((item) => {
+      item.classList.remove('open');
+      const btn = $('.dropdown-toggle', item);
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  };
+  document.addEventListener('click', (e) => { if (!e.target.closest('.has-dropdown')) closeDropdowns(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDropdowns(); });
+
   /* ---------- Scroll reveal ---------- */
   const revealEls = $$('.reveal');
   if ('IntersectionObserver' in window && !prefersReducedMotion) {

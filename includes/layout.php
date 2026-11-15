@@ -5,14 +5,18 @@
 
 require_once __DIR__ . '/functions.php';
 
-// Tab-bar navigation: key => [url, label]. Order is the tab order.
+// Tab-bar navigation: key => [url, label, children?]. Order is the tab order.
+// Children are [url, label, external?] and render as a dropdown under the tab.
 function nav_items(): array
 {
     return [
         'home'          => ['index.php', 'Home'],
         'about'         => ['about.php', 'About'],
         'services'      => ['services.php', 'Services'],
-        'e-procurement' => ['e-procurement.php', 'E-Procurement'],
+        'e-procurement' => ['e-procurement.php', 'E-Procurement', [
+            ['e-procurement.php', 'E-Procurement Services', false],
+            ['https://tender.masconsultancy.org/', 'BDtenders', true],
+        ]],
         'web-it'        => ['web-it.php', 'Web & IT'],
         'market-entry'  => ['market-entry.php', 'Market Entry'],
         'agency'        => ['agency.php', 'Agency'],
@@ -84,8 +88,21 @@ function site_header(string $active, bool $solid = false): void
       </a>
       <nav aria-label="Primary">
         <ul class="nav-links" id="navLinks">
-          <?php foreach (nav_items() as $key => [$url, $label]): ?>
+          <?php foreach (nav_items() as $key => $item): ?>
+          <?php [$url, $label] = $item; $children = $item[2] ?? []; ?>
+          <?php if ($children): ?>
+          <li class="has-dropdown">
+            <a href="<?php echo e($url); ?>"<?php echo $key === $active ? ' class="active" aria-current="page"' : ''; ?>><?php echo e($label); ?></a>
+            <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-label="<?php echo e($label); ?> submenu"></button>
+            <ul class="dropdown-menu">
+              <?php foreach ($children as [$curl, $clabel, $cext]): ?>
+              <li><a href="<?php echo e($curl); ?>"<?php echo $cext ? ' target="_blank" rel="noopener"' : ''; ?>><?php echo e($clabel); ?><?php echo $cext ? ' <span aria-hidden="true">&nearr;</span>' : ''; ?></a></li>
+              <?php endforeach; ?>
+            </ul>
+          </li>
+          <?php else: ?>
           <li><a href="<?php echo e($url); ?>"<?php echo $key === $active ? ' class="active" aria-current="page"' : ''; ?>><?php echo e($label); ?></a></li>
+          <?php endif; ?>
           <?php endforeach; ?>
           <li><a href="contact-us.php" class="nav-cta"<?php echo $active === 'contact' ? ' aria-current="page"' : ''; ?>>Get in Touch</a></li>
         </ul>
@@ -100,8 +117,12 @@ function site_header(string $active, bool $solid = false): void
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
     <nav aria-label="Mobile">
-      <?php foreach (nav_items() as $key => [$url, $label]): ?>
+      <?php foreach (nav_items() as $key => $item): ?>
+      <?php [$url, $label] = $item; $children = $item[2] ?? []; ?>
       <a href="<?php echo e($url); ?>"><?php echo e($label); ?></a>
+      <?php foreach ($children as [$curl, $clabel, $cext]): ?>
+      <a href="<?php echo e($curl); ?>" class="mobile-sub"<?php echo $cext ? ' target="_blank" rel="noopener"' : ''; ?>><?php echo e($clabel); ?></a>
+      <?php endforeach; ?>
       <?php endforeach; ?>
       <a href="faq.php">FAQ</a>
       <a href="contact-us.php" class="mobile-cta">Get in Touch</a>

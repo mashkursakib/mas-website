@@ -179,6 +179,40 @@ a:hover { color: var(--green-900); }
 }
 .nav-links a.nav-cta:hover { background: var(--green-800); }
 
+/* Nav dropdown (E-Procurement) */
+.nav-links li.has-dropdown { position: relative; display: flex; align-items: center; }
+.dropdown-toggle {
+  background: none; border: none; cursor: pointer; padding: 8px 6px 8px 2px;
+  display: inline-flex; align-items: center; color: var(--ink-soft); line-height: 1;
+}
+.dropdown-toggle::after {
+  content: ''; width: 7px; height: 7px; border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px);
+  transition: transform .25s;
+}
+.has-dropdown.open .dropdown-toggle::after { transform: rotate(225deg) translateY(-2px); }
+.dropdown-menu {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 1001;
+  min-width: 250px; list-style: none; margin: 0; padding: 6px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.dropdown-menu::before {
+  content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px;
+}
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu,
+.has-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; transform: none; }
+.dropdown-menu a {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 14px; border-radius: 10px; font-size: .9rem; white-space: nowrap;
+  color: var(--ink); background: transparent; text-decoration: none; font-weight: 500;
+}
+.dropdown-menu a:hover { background: rgba(20,32,26,.06); color: var(--ink); }
+.dropdown-menu a span { color: var(--ink-mute); font-size: .8rem; }
+
 .nav-hamburger {
   display: none; flex-direction: column; gap: 6px; cursor: pointer;
   padding: 8px; background: none; border: none;
@@ -206,6 +240,9 @@ a:hover { color: var(--green-900); }
 .mobile-menu nav a.mobile-cta {
   font-family: var(--font-sans); font-size: 1rem; background: var(--gold);
   color: var(--green-950); text-align: center; margin-top: 14px; font-weight: 600;
+}
+.mobile-menu nav a.mobile-sub {
+  font-size: 1.1rem; padding: 8px 10px 8px 28px; color: rgba(255,255,255,.72);
 }
 .mobile-contact { margin-top: auto; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid rgba(255,255,255,.15); padding-top: 20px; }
 .mobile-contact a { color: var(--gold-light); text-decoration: none; font-size: .95rem; }

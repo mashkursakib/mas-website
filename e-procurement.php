@@ -112,6 +112,43 @@ site_header('e-procurement', true);
     </div>
   </section>
 
+  <!-- ============ TENDERBD ============ -->
+  <section class="section section-alt" id="bdtenders">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our Platform &middot; BDtenders</p>
+        <h2 class="section-title">TenderBD: Every e-GP Tender, in One Place</h2>
+        <p class="section-sub">TenderBD is MAS Corporation&apos;s own tender intelligence platform for Bangladesh. It tracks live tenders from the official e-GP portal and puts them in one searchable feed, so contractors and suppliers can find the tenders they can actually win — without opening a dozen tabs every morning.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🔍</div>
+          <h3>Live e-GP Feed</h3>
+          <p>Real notices from eprocure.gov.bd, searchable by keyword, work type, district, department and deadline — in English and Bangla.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">✅</div>
+          <h3>Eligibility Scoring</h3>
+          <p>Every tender is scored against your company profile, so you see what you qualify for — and exactly what is missing.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🤝</div>
+          <h3>JV Room</h3>
+          <p>Find a partner and bid jointly on tenders too big for one firm, with shared rooms to coordinate the bid.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">📅</div>
+          <h3>Pipeline &amp; Alerts</h3>
+          <p>Track tenders from shortlist to submission, with deadline reminders and corrigendum alerts so nothing slips.</p>
+        </article>
+      </div>
+      <div class="center reveal" style="margin-top: 36px;">
+        <p>Free to browse. Premium BDT 399/month, Pro BDT 799/month.</p>
+        <a href="https://tender.masconsultancy.org/" class="btn btn-primary" target="_blank" rel="noopener">Explore TenderBD &rarr;</a>
+      </div>
+    </div>
+  </section>
+
 <?php
 cta_band(
     'Have a Tender Coming Up?',
