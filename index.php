@@ -173,6 +173,12 @@ site_header('home');
           <p>A clear plan for going digital — then the build.</p>
           <a href="services.php#transformation" class="text-link">Learn more &rarr;</a>
         </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🎯</div>
+          <h3>Lead Generation</h3>
+          <p>B2B leads, LinkedIn outreach, and appointments booked.</p>
+          <a href="services.php#lead-generation" class="text-link">Learn more &rarr;</a>
+        </article>
       </div>
       <div class="center reveal">
         <a href="services.php" class="btn btn-outline">All Services &rarr;</a>
