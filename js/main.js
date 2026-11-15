@@ -65,18 +65,31 @@
   /* ---------- Nav dropdown (desktop) ---------- */
   const dropdownToggles = $$('.dropdown-toggle');
   dropdownToggles.forEach((btn) => {
+    const item = btn.closest('.has-dropdown');
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const item = btn.closest('.has-dropdown');
       const isOpen = item.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(isOpen));
+      // Explicit close: suppress the hover/focus show rules until the
+      // pointer leaves, and drop focus, or the menu would stay visible.
+      if (isOpen) {
+        item.classList.remove('closed');
+      } else {
+        item.classList.add('closed');
+        btn.blur();
+      }
     });
+    item.addEventListener('mouseleave', () => item.classList.remove('closed'));
   });
   const closeDropdowns = () => {
     $$('.has-dropdown.open').forEach((item) => {
       item.classList.remove('open');
+      item.classList.add('closed');
       const btn = $('.dropdown-toggle', item);
-      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.blur();
+      }
     });
   };
   document.addEventListener('click', (e) => { if (!e.target.closest('.has-dropdown')) closeDropdowns(); });

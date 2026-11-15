@@ -202,8 +202,8 @@ a:hover { color: var(--green-900); }
 .dropdown-menu::before {
   content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px;
 }
-.has-dropdown:hover .dropdown-menu,
-.has-dropdown:focus-within .dropdown-menu,
+.has-dropdown:hover:not(.closed) .dropdown-menu,
+.has-dropdown:focus-within:not(.closed) .dropdown-menu,
 .has-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; transform: none; }
 .dropdown-menu a {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
