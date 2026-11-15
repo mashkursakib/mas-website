@@ -163,13 +163,14 @@ a:hover { color: var(--green-900); }
 .nav-logo .nav-wordmark { height: 42px; width: auto; }
 .nav-logo-text { font-family: var(--font-display); font-size: 1.32rem; font-weight: 650; color: var(--ink); letter-spacing: -.01em; }
 .nav-logo-text em { font-style: italic; color: var(--gold); font-weight: 500; }
-.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 999px; padding: 4px; box-shadow: var(--shadow-sm); }
 .nav-links a {
   text-decoration: none; font-size: .88rem; font-weight: 500;
-  color: var(--ink-soft); padding: 9px 13px; border-radius: 999px; transition: all .25s;
+  color: var(--ink-soft); padding: 8px 13px; border-radius: 999px; transition: all .25s;
 }
 .nav-links a:hover { color: var(--ink); background: rgba(20,32,26,.06); }
-.nav-links a.active { color: var(--green-700); font-weight: 600; }
+.nav-links a.active { color: #fff; background: var(--green-900); font-weight: 600; }
+.nav-links a.active:hover { background: var(--green-800); color: #fff; }
 .nav-links a.nav-cta {
   background: var(--ink); color: #fff !important; padding: 11px 22px;
   border-radius: 999px; font-weight: 600; margin-left: 10px;
@@ -311,6 +312,17 @@ a:hover { color: var(--green-900); }
 .page-hero p { color: var(--ink-soft); max-width: 640px; margin: 0 auto; font-size: 1.08rem; }
 .page-hero .eyebrow-light { color: var(--gold); }
 
+/* ---------- Two-column grid (mission/vision) ---------- */
+.duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--green-900); color: #fff; border-radius: var(--radius-lg);
+  padding: 56px 48px; text-align: center;
+}
+.cta-band h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.7rem, 3.4vw, 2.3rem); letter-spacing: -.01em; color: #fff; margin-bottom: 12px; }
+.cta-band p { color: rgba(255,255,255,.78); max-width: 600px; margin: 0 auto 26px; font-size: 1.05rem; line-height: 1.7; }
+
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
 .about-media { position: relative; }
@@ -382,6 +394,7 @@ a:hover { color: var(--green-900); }
 .card:hover .card-icon { background: rgba(255,255,255,.1); }
 .card:hover .text-link { color: var(--gold-light); }
 .card:hover .card-metric { color: var(--gold-light) !important; }
+.card:hover .check-list li { color: rgba(255,255,255,.78); }
 .card-icon {
   width: 58px; height: 58px; border-radius: 50%; background: var(--paper-warm);
   border: 1px solid var(--line);
@@ -656,6 +669,8 @@ a:hover { color: var(--green-900); }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
   .cards-grid, .news-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .split-grid, .concerns-wrap, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -669,8 +684,6 @@ a:hover { color: var(--green-900); }
 }
 
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
   .section { padding: 84px 0; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 0; }
   .stat:nth-child(3) { border-left: none; padding-left: 0; }
@@ -680,7 +693,7 @@ a:hover { color: var(--green-900); }
 
 @media (max-width: 640px) {
   .container, .nav-inner, .hero-content, .hero-figure { padding-left: 20px; padding-right: 20px; }
-  .cards-grid, .process-grid, .news-grid, .dev-grid { grid-template-columns: 1fr; }
+  .cards-grid, .process-grid, .news-grid, .dev-grid, .duo-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .newsletter-form { flex-direction: column; border-radius: var(--radius); gap: 8px; }
   .newsletter-form .btn { width: 100%; }
@@ -694,6 +707,7 @@ a:hover { color: var(--green-900); }
   .journey-num { width: 52px; font-size: 1.9rem; }
   .concerns-detail { padding: 30px 24px; min-height: 0; }
   .contact-form { padding: 28px 22px; }
+  .cta-band { padding: 40px 24px; }
   .about-badge-card { position: static; margin-top: 16px; }
   .media-stat { left: 12px; }
   .stats-band { padding: 48px 0; }

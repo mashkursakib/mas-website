@@ -29,15 +29,24 @@ with a persistent disk would make panel edits permanent.
 ## Files
 
 ```
-index.php           Homepage (reads data/site.json + data/posts.json)
+index.php           Homepage: hero, stats, firm + service teasers, Why MAS, news
+about.php           About the group: story, mission & vision, firm tabs, how we work
+services.php        All seven service lines + challenges switcher + how to start
+e-procurement.php   MAS Corporation deep dive: process, portals, contracts, sectors
+web-it.php          MAS Communication deep dive: what we build + typical journey
+market-entry.php    MAS Consultancy deep dive: the six-step setup journey
+portfolio.php       Selected engagements (anonymised), firm by firm
+faq.php             Frequently asked questions
+contact-us.php      Contact page (info cards + form + map)
 blog.php            News & blog listing
+post.php            Single article page
 css/style.css       Editorial theme styles
 js/main.js          Interactions (counters, tabs, FAQ, filters, forms)
 logo.png            Logo (root — referenced as /logo.png)
 contact.php         Contact form handler (recipient from Site Settings)
 newsletter.php      Newsletter handler (saves subscribers.txt + emails office)
 config.php          Admin login (username + password hash) — never share
-includes/           Shared PHP helpers (data, auth, CSRF, escaping)
+includes/           Shared PHP: helpers (functions.php) + page layout (layout.php)
 data/               Editable content — site.json (settings), posts.json (blog)
 admin/              Control panel (login, dashboard, posts, settings)
 Dockerfile          PHP 8.2 + Apache image for Render
