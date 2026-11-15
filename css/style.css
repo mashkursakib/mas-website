@@ -759,7 +759,7 @@ a:hover { color: var(--green-900); }
   .hero-actions .btn { width: 100%; }
   .hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .hero-badge { font-size: .68rem; letter-spacing: .1em; white-space: nowrap; }
-  .hero-chip { position: static; margin: 16px 20px 0; }
+  .hero-chip { position: static; margin: 16px 20px 0; transform: none; }
   .hero-figure { margin-top: 40px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .journey-step { gap: 20px; }
@@ -777,6 +777,11 @@ a:hover { color: var(--green-900); }
   .tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   .tab-btn { white-space: nowrap; }
   .nav-logo .nav-wordmark { height: 30px; }
+}
+
+@media (max-width: 360px) {
+  /* Smallest phones: shrink the wordmark so the hamburger fits (it overflowed 7px at 320px). */
+  .nav-logo .nav-wordmark { height: 24px; }
 }
 
 /* ============================================================
