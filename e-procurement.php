@@ -1,10 +1,22 @@
 <?php
 require_once __DIR__ . '/includes/layout.php';
 
+// Service schema for the e-procurement firm page.
+$extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'E-Procurement Services in Bangladesh',
+    'description' => 'MAS Corporation manages the full public procurement process in Bangladesh — tender tracking, eligibility checks, BOQ pricing, double-verified compliance and early submission, with an 86% bid success rate across 175+ projects.',
+    'provider' => ['@type' => 'Organization', 'name' => 'MAS Corporation', 'url' => 'https://masconsultancy.org/e-procurement.php'],
+    'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
+    'url' => 'https://masconsultancy.org/e-procurement.php',
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
+
 page_head([
     'title'       => 'E-Procurement in Bangladesh | MAS Corporation — 86% Bid Success',
     'description' => 'MAS Corporation manages the full public procurement process in Bangladesh — tender tracking, eligibility checks, BOQ pricing, double-verified compliance and early submission, with an 86% bid success rate across 175+ projects.',
     'canonical'   => 'https://masconsultancy.org/e-procurement.php',
+    'extra'       => $extra,
 ]);
 site_header('e-procurement', true);
 ?>

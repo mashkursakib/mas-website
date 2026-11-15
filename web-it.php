@@ -1,10 +1,22 @@
 <?php
 require_once __DIR__ . '/includes/layout.php';
 
+// Service schema for the web & IT firm page.
+$extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'Web & App Development',
+    'description' => 'MAS Communication designs, builds, and maintains websites and web applications — business sites, e-commerce stores, enterprise portals and mobile apps — for clients in Bangladesh and abroad.',
+    'provider' => ['@type' => 'Organization', 'name' => 'MAS Communication', 'url' => 'https://masconsultancy.org/web-it.php'],
+    'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
+    'url' => 'https://masconsultancy.org/web-it.php',
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
+
 page_head([
     'title'       => 'Web & App Development in Bangladesh | MAS Communication',
     'description' => 'MAS Communication designs, builds, and maintains websites and web applications — business sites, e-commerce stores, enterprise portals and mobile apps — for clients in Bangladesh and abroad.',
     'canonical'   => 'https://masconsultancy.org/web-it.php',
+    'extra'       => $extra,
 ]);
 site_header('web-it', true);
 ?>

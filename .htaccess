@@ -22,6 +22,9 @@ RedirectMatch 403 ^/(data|includes)/.*$
 # Never expose the git history
 RedirectMatch 403 ^/\.git(/.*)?$
 
+# Never serve image-generation metadata files left in the web root
+RedirectMatch 403 ^/media-generation-.*\.json$
+
 # Cache static assets for a week (safe: filenames change on redesign)
 <IfModule mod_expires.c>
     ExpiresActive On

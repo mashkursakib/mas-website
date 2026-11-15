@@ -1,10 +1,22 @@
 <?php
 require_once __DIR__ . '/includes/layout.php';
 
+// Service schema for the market entry firm page.
+$extra = "\n  <script type=\"application/ld+json\">\n" . json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'Business Setup & Market Entry in Bangladesh',
+    'description' => 'MAS Consultancy helps foreign companies establish and run a legal, working presence in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing, in six guided steps.',
+    'provider' => ['@type' => 'Organization', 'name' => 'MAS Consultancy', 'url' => 'https://masconsultancy.org/market-entry.php'],
+    'areaServed' => ['@type' => 'Country', 'name' => 'Bangladesh'],
+    'url' => 'https://masconsultancy.org/market-entry.php',
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
+
 page_head([
     'title'       => 'Start a Business in Bangladesh | MAS Consultancy — Market Entry',
     'description' => 'MAS Consultancy helps foreign companies establish and run a legal, working presence in Bangladesh — RJSC registration, BIDA approval, licensing, banking, office setup and staffing, in six guided steps.',
     'canonical'   => 'https://masconsultancy.org/market-entry.php',
+    'extra'       => $extra,
 ]);
 site_header('market-entry', true);
 ?>

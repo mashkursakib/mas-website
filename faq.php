@@ -3,10 +3,30 @@ require_once __DIR__ . '/includes/layout.php';
 $site    = load_site();
 $contact = $site['contact'] ?? [];
 
+// FAQPage schema — answers mirror the visible FAQ text below (plain text, no links).
+$faqPairs = [
+    ['What is the MAS Group, and how are the three firms different?', 'MAS Consultancy is a licensed group of companies under MAS Corporation. MAS Corporation handles e-procurement, MAS Communication delivers web development and IT solutions, and MAS Consultancy provides end-to-end support for international businesses expanding into Bangladesh. One team coordinates all three for you.'],
+    ['Which e-procurement portals do you work with?', 'We work across e-GP Bangladesh, CPTU, the BMET Portal, DESCO Procurement, BIWTA, and LGED tenders — covering government, utility, transport, and engineering contracts.'],
+    ['What does setting up a business in Bangladesh involve?', 'Six steps: market research and feasibility, company registration and licensing (RJSC, BIDA, trade licence, TIN/BIN), office setup and infrastructure, local staffing, banking and financial setup, and ongoing support and compliance. We manage the full journey.'],
+    ['Do you work with US-based businesses?', 'Yes — US businesses are our core focus. We serve 52+ US clients, from market entry and company setup to web development and e-procurement support, and our team works across US time zones.'],
+    ['Do you offer lead generation or appointment setting?', 'Yes. Our team offers B2B lead generation, LinkedIn outreach, and appointment setting for international firms building a sales pipeline — delivered to agreed targets, with regular reporting.'],
+    ['How do we start working together?', 'Tell us what you are planning — through the contact form, email, or WhatsApp. We reply within 24 hours on business days with next steps and any questions, then a short scoping conversation before any proposal.'],
+    ['How much does a project cost?', 'Every project is quoted individually — it depends on scope, timeline, and what you need from us. Tell us about your project and we will send you a detailed, itemised estimate. There is no obligation.'],
+    ['How long does business setup take in Bangladesh?', 'It depends on the entity type and the approvals involved — some registrations move quickly, others wait on the authorities. After a first review of your case, we confirm a realistic timeline before any work starts.'],
+    ['What are your business hours?', 'Sunday to Thursday, 9:00 AM – 6:00 PM (Bangladesh Time). We are closed Friday and Saturday. You can reach us anytime by email at ' . ($contact['email1'] ?? 'info@masconsultancy.org') . ' or on WhatsApp at ' . ($contact['phone_display'] ?? '') . '.'],
+    ['How quickly will I hear back after contacting you?', 'We reply within 24 hours on business days. For urgent inquiries, WhatsApp is the fastest way to reach us.'],
+];
+$faqEntities = [];
+foreach ($faqPairs as [$q, $a]) {
+    $faqEntities[] = ['@type' => 'Question', 'name' => $q, 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $a]];
+}
+$extra = "\n  <script type=\"application/ld+json\">\n" . json_encode(['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $faqEntities], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n  </script>";
+
 page_head([
     'title'       => 'FAQ | MAS Consultancy — E-Procurement, Business Setup & Services',
     'description' => 'Frequently asked questions about MAS Group: the three firms, e-procurement portals, setting up a business in Bangladesh, lead generation, pricing, timelines, and how to get started.',
     'canonical'   => 'https://masconsultancy.org/faq.php',
+    'extra'       => $extra,
 ]);
 site_header('faq', true);
 ?>
