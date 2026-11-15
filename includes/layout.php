@@ -35,8 +35,17 @@ function page_head(array $opts): void
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) — GA4, property masconsultancy.org (G-XJDF0DN25M) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJDF0DN25M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XJDF0DN25M');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="RtVPazd3vLeIZ7rx06zuJCmHE-kzX8Y3AJQsRol6EuU">
   <title><?php echo e($title); ?></title>
   <meta name="description" content="<?php echo e($desc); ?>">
   <meta name="author" content="MAS Consultancy">
