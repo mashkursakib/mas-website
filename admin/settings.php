@@ -271,6 +271,8 @@ $siteMeta = $site['site'] ?? [];
     </div>
     <button type="submit" class="btn">Change password</button>
   </form>
+  <?php /* Temporary: shows the current password hash so the repo can be synced after a password change. Remove once the repo config.php matches. */ ?>
+  <p class="hint" style="margin-top: 14px;">Current password hash (for syncing the site code after a change): <code><?php echo e(ADMIN_PASS_HASH); ?></code></p>
 </div>
 
 <?php require_once __DIR__ . '/_footer.php'; ?>

@@ -196,7 +196,7 @@ function site_footer(): void
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span id="year">2026</span> MAS Group. Licensed under MAS Corporation. All rights reserved.</p>
-        <p><a href="blog.php">News &amp; Blog</a> &middot; <a href="faq.php">FAQ</a> &middot; <a href="contact-us.php">Contact Us</a></p>
+        <p><a href="blog.php">News &amp; Blog</a> &middot; <a href="faq.php">FAQ</a> &middot; <a href="contact-us.php">Contact Us</a> &middot; <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms.php">Terms of Service</a></p>
       </div>
     </div>
   </footer>
