@@ -70,7 +70,7 @@ site_header('services', true);
             <li>Network &amp; server setup</li>
             <li>Cloud migration</li>
             <li>Ongoing monitoring &amp; support</li>
-            <li>Local IT help for your Dhaka office</li>
+            <li>Local IT help for your office</li>
           </ul>
           <a href="contact-us.php" class="text-link">Talk to us &rarr;</a>
         </article>
@@ -104,7 +104,7 @@ site_header('services', true);
           <div class="card-icon" aria-hidden="true">🎯</div>
           <p class="card-kicker">MAS Consultancy &middot; Business Development</p>
           <h3>B2B Lead Generation &amp; Appointment Setting</h3>
-          <p>Our Dhaka team builds your sales pipeline while you run the business: targeted prospect research, LinkedIn outreach, and appointment setting — delivered to agreed targets, with regular reporting on every campaign.</p>
+          <p>Our team builds your sales pipeline while you run the business: targeted prospect research, LinkedIn outreach, and appointment setting — delivered to agreed targets, with regular reporting on every campaign.</p>
           <ul class="check-list">
             <li>Targeted prospect lists</li>
             <li>LinkedIn outreach</li>

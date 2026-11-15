@@ -37,11 +37,11 @@ site_header('market-entry', true);
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">03</span>
-          <div><h3>Office Setup &amp; Infrastructure</h3><p>Identifying and securing office space in prime Dhaka locations, setting up IT infrastructure, internet connectivity, and all operational utilities — so the operation is real, not just registered.</p></div>
+          <div><h3>Office Setup &amp; Infrastructure</h3><p>Identifying and securing office space in prime business locations, setting up IT infrastructure, internet connectivity, and all operational utilities — so the operation is real, not just registered.</p></div>
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">04</span>
-          <div><h3>Local Staffing &amp; Recruitment</h3><p>We recruit and vet local professionals — engineers, managers, analysts, and support staff — through our network across Dhaka and the major business hubs, and support work permit recommendations for foreign staff you place in Bangladesh.</p></div>
+          <div><h3>Local Staffing &amp; Recruitment</h3><p>We recruit and vet local professionals — engineers, managers, analysts, and support staff — through our network across Bangladesh&apos;s major business hubs, and support work permit recommendations for foreign staff you place in Bangladesh.</p></div>
         </li>
         <li class="journey-step reveal">
           <span class="journey-num">05</span>
@@ -62,11 +62,11 @@ site_header('market-entry', true);
         <div class="split-copy reveal">
           <p class="eyebrow">Beyond Setup</p>
           <h2 class="section-title">Once You&apos;re Set Up, We Build Your Pipeline Too</h2>
-          <p>Registration is the beginning, not the business. The Dhaka team can also build your sales pipeline while you run the operation — B2B lead generation, LinkedIn outreach, and appointment setting, delivered to agreed targets with regular reporting.</p>
+          <p>Registration is the beginning, not the business. Our team can also build your sales pipeline while you run the operation — B2B lead generation, LinkedIn outreach, and appointment setting, delivered to agreed targets with regular reporting.</p>
           <a href="services.php#lead-generation" class="btn btn-primary">See Lead Generation</a>
         </div>
         <div class="split-media reveal">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Modern office space in Dhaka" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Modern office space" loading="lazy">
         </div>
       </div>
     </div>

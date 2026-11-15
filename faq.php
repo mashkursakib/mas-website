@@ -42,7 +42,7 @@ site_header('faq', true);
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Do you offer lead generation or appointment setting? <span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes. Our Dhaka team offers B2B lead generation, LinkedIn outreach, and appointment setting for international firms building a sales pipeline — delivered to agreed targets, with regular reporting. See <a href="services.php#lead-generation">Lead Generation</a>.</p></div>
+          <div class="faq-a"><p>Yes. Our team offers B2B lead generation, LinkedIn outreach, and appointment setting for international firms building a sales pipeline — delivered to agreed targets, with regular reporting. See <a href="services.php#lead-generation">Lead Generation</a>.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">How do we start working together? <span class="faq-icon">+</span></button>

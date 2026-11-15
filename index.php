@@ -97,7 +97,7 @@ site_header('home');
       <div class="section-head reveal">
         <p class="eyebrow">About Us</p>
         <h2 class="section-title">One Group. Three Specialized Firms. <span class="accent">Complete Solutions.</span></h2>
-        <p class="section-sub">MAS Group is a Dhaka-based group of three specialised firms. Each one leads its own field — and one team coordinates all three for you, so you deal with a single partner from first conversation to finished work.</p>
+        <p class="section-sub">Three specialised firms, 175+ projects delivered. Each one leads its own field — and one team coordinates all three for you, so you deal with a single partner from first conversation to finished work.</p>
       </div>
       <div class="cards-grid">
         <article class="card reveal">
@@ -190,7 +190,7 @@ site_header('home');
           <p>Most international companies entering Bangladesh need three things at the same time: a legal local presence, a credible digital presence, and access to public sector work. MAS Group is built so one partner covers all three — you never have to find, brief, and manage three separate providers, or carry the gaps between them.</p>
           <ul class="check-list">
             <li><strong>Specialists, not generalists.</strong> Every engagement is handled by the firm that does that work all day, every day.</li>
-            <li><strong>On the ground in Dhaka.</strong> Our head office deals with local authorities, portals, and banks directly — in Bangladesh hours, in person when it matters.</li>
+            <li><strong>A track record you can check.</strong> Tenders won, websites launched, companies set up — see the results on our <a href="portfolio.php">Portfolio page</a>.</li>
             <li><strong>Built for international clients.</strong> English-first communication, written updates, and schedules aligned for live conversation across US, European, and Middle East time zones.</li>
           </ul>
           <a href="about.php" class="btn btn-primary">How We Work</a>

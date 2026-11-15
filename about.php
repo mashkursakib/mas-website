@@ -4,7 +4,7 @@ $site  = load_site();
 $about = $site['about'] ?? [];
 
 page_head([
-    'title'       => 'About MAS Group | Dhaka-Based Team for International Business',
+    'title'       => 'About MAS Group | Built for International Business',
     'description' => 'Founded in Dhaka in 2021, MAS Group is three specialised firms — e-procurement, web & IT, and market entry — working as one accountable team for international business in Bangladesh.',
     'canonical'   => 'https://masconsultancy.org/about.php',
 ]);
@@ -15,7 +15,7 @@ site_header('about', true);
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow eyebrow-light">About MAS Group</p>
-      <h1>A Dhaka Team Built for International Business</h1>
+      <h1>A Team Built for International Business</h1>
       <p>Founded in 2021, MAS Group helps companies from the United States and 20+ countries set up, get online, and win government work in Bangladesh.</p>
     </div>
   </section>
@@ -140,14 +140,15 @@ site_header('about', true);
           <p>Clear milestones, deliverables, and performance reporting throughout — you always know where a project stands.</p>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">📍</div>
-          <h3>On the Ground in Dhaka</h3>
-          <p>A head office in Kakrail, Dhaka, working Bangladesh hours and dealing with local authorities, portals, and banks directly.</p>
+          <div class="card-icon" aria-hidden="true">🏆</div>
+          <h3>175+ Projects Delivered</h3>
+          <p>Tenders won, websites launched, and companies set up across 20+ countries — the work speaks for itself.</p>
+          <a href="portfolio.php" class="text-link">See the work &rarr;</a>
         </article>
         <article class="card reveal">
           <div class="card-icon" aria-hidden="true">📈</div>
           <h3>Business Development, Handled Locally</h3>
-          <p>B2B lead generation, LinkedIn outreach, and appointment setting from the Dhaka team, so pipeline-building continues alongside setup and operations.</p>
+          <p>B2B lead generation, LinkedIn outreach, and appointment setting from our team, so pipeline-building continues alongside setup and operations.</p>
         </article>
       </div>
     </div>
