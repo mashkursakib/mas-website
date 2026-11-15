@@ -15,6 +15,7 @@ function nav_items(): array
         'e-procurement' => ['e-procurement.php', 'E-Procurement'],
         'web-it'        => ['web-it.php', 'Web & IT'],
         'market-entry'  => ['market-entry.php', 'Market Entry'],
+        'agency'        => ['agency.php', 'Agency'],
         'portfolio'     => ['portfolio.php', 'Portfolio'],
         'blog'          => ['blog.php', 'Blog'],
     ];
@@ -155,7 +156,7 @@ function site_footer(): void
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.php" class="nav-logo"><img src="logo.png" alt="MAS Consultancy logo" height="40"><span class="nav-logo-text">MAS <em>Consultancy</em></span></a>
-        <p>One group, complete solutions. E-procurement, web &amp; IT, and foreign business setup — trusted by US businesses since 2021.</p>
+        <p>One group, complete solutions. E-procurement, web &amp; IT, foreign business setup, and AI-driven marketing — trusted by US businesses since 2021.</p>
         <a class="footer-whatsapp" href="https://wa.me/<?php echo e($contact['whatsapp'] ?? ''); ?>" target="_blank" rel="noopener">💬 WhatsApp Us</a>
       </div>
       <nav class="footer-col" aria-label="Firms">
@@ -163,6 +164,7 @@ function site_footer(): void
         <a href="e-procurement.php">MAS Corporation</a>
         <a href="web-it.php">MAS Communication</a>
         <a href="market-entry.php">MAS Consultancy</a>
+        <a href="agency.php">MAS Hybrid Agency</a>
         <a href="about.php">About the Group</a>
       </nav>
       <nav class="footer-col" aria-label="Services">
