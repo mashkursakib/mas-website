@@ -15,7 +15,7 @@ $jsonLd = '
     "name": "MAS Consultancy",
     "url": "https://masconsultancy.org",
     "logo": "https://masconsultancy.org/logo.png",
-    "description": "Licensed group of companies under MAS Corporation: e-procurement, web & IT, and foreign business setup in Bangladesh.",
+    "description": "Licensed group of companies under MAS Corporation: e-procurement, web & IT, and foreign business setup.",
     "foundingDate": "2021",
     "address": {
       "@type": "PostalAddress",
@@ -35,8 +35,8 @@ $jsonLd = '
   </script>';
 
 page_head([
-    'title'       => 'MAS Consultancy | E-Procurement, Web Development & Bangladesh Business Setup',
-    'description' => 'MAS Consultancy — Licensed under MAS Corporation. Three specialized firms for e-procurement, IT & web development, and Bangladesh market entry. Serving US businesses since 2021.',
+    'title'       => 'MAS Consultancy | E-Procurement, Web Development & Business Setup',
+    'description' => 'MAS Consultancy — Licensed under MAS Corporation. Three specialized firms for e-procurement, IT & web development, and market entry. Serving US businesses since 2021.',
     'canonical'   => 'https://masconsultancy.org/',
     'extra'       => $jsonLd,
 ]);
@@ -64,7 +64,7 @@ site_header('home');
       </div>
     </div>
     <figure class="hero-figure">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=80" alt="Modern business district">
+      <img src="hero-sketch.jpg" alt="Sketch illustration of MAS Group's three areas of work: government tenders, web development, and business setup">
       <figcaption class="hero-chip">
         <span class="hero-chip-num"><?php echo e($hero['chip_value'] ?? ''); ?></span>
         <span class="hero-chip-text"><?php echo e_nl($hero['chip_text'] ?? ''); ?></span>
@@ -134,7 +134,7 @@ site_header('home');
       <div class="section-head reveal">
         <p class="eyebrow">What We Do</p>
         <h2 class="section-title">Services Built Around Your Business</h2>
-        <p class="section-sub">Seven service lines across the MAS Group — from winning government tenders to building your sales pipeline in Bangladesh.</p>
+        <p class="section-sub">Seven service lines across the MAS Group — from winning government tenders to building your sales pipeline.</p>
       </div>
       <div class="cards-grid">
         <article class="card reveal">
@@ -187,7 +187,7 @@ site_header('home');
         <div class="split-copy reveal">
           <p class="eyebrow">Why MAS Group</p>
           <h2 class="section-title">One Partner for Three Jobs at Once</h2>
-          <p>Most international companies entering Bangladesh need three things at the same time: a legal local presence, a credible digital presence, and access to public sector work. MAS Group is built so one partner covers all three — you never have to find, brief, and manage three separate providers, or carry the gaps between them.</p>
+          <p>Most international companies expanding into a new market need three things at the same time: a legal local presence, a credible digital presence, and access to public sector work. MAS Group is built so one partner covers all three — you never have to find, brief, and manage three separate providers, or carry the gaps between them.</p>
           <ul class="check-list">
             <li><strong>Specialists, not generalists.</strong> Every engagement is handled by the firm that does that work all day, every day.</li>
             <li><strong>A track record you can check.</strong> Tenders won, websites launched, companies set up — see the results on our <a href="portfolio.php">Portfolio page</a>.</li>
@@ -196,7 +196,7 @@ site_header('home');
           <a href="about.php" class="btn btn-primary">How We Work</a>
         </div>
         <div class="split-media reveal">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="MAS Group team collaborating" loading="lazy">
+          <img src="why-mas-sketch.jpg" alt="Sketch illustration of the MAS team working together" loading="lazy">
         </div>
       </div>
     </div>

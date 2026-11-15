@@ -114,8 +114,8 @@ function newsletter_block(): void
     <div class="container container-narrow">
       <div class="newsletter-box reveal">
         <p class="eyebrow">Stay Updated</p>
-        <h2 class="section-title">Get Business Insights for the Bangladesh Market</h2>
-        <p>Subscribe to receive the latest updates on Bangladesh e-procurement opportunities, market insights, and business news from the MAS Group.</p>
+        <h2 class="section-title">Get Business Insights That Matter</h2>
+        <p>Subscribe to receive the latest updates on e-procurement opportunities, market insights, and business news from the MAS Group.</p>
         <form class="newsletter-form" id="newsletterForm" novalidate>
           <label class="sr-only" for="newsletterEmail">Business email</label>
           <input type="email" id="newsletterEmail" name="email" class="newsletter-input" placeholder="Enter your business email" required>
@@ -155,7 +155,7 @@ function site_footer(): void
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.php" class="nav-logo"><img src="logo.png" alt="MAS Consultancy logo" height="40"><span class="nav-logo-text">MAS <em>Consultancy</em></span></a>
-        <p>One group, complete solutions. E-procurement, web &amp; IT, and foreign business setup in Bangladesh — trusted by US businesses since 2021.</p>
+        <p>One group, complete solutions. E-procurement, web &amp; IT, and foreign business setup — trusted by US businesses since 2021.</p>
         <a class="footer-whatsapp" href="https://wa.me/<?php echo e($contact['whatsapp'] ?? ''); ?>" target="_blank" rel="noopener">💬 WhatsApp Us</a>
       </div>
       <nav class="footer-col" aria-label="Firms">
