@@ -107,7 +107,7 @@ site_header('agency', true);
           <p>Over half of US small businesses say they can't see the return on their agency spend. The Brain exists to fix that: every dollar is tracked to a lead or a booking, and you see it every morning before your first coffee.</p>
           <ul class="check-list">
             <li><strong>US hours, US clients.</strong> The team works your business hours and answers in writing, same day.</li>
-            <li><strong>Senior work, honest pricing.</strong> Retainers below typical US agency rates, because delivery runs from our Dhaka base — the same team behind 175+ MAS Group projects.</li>
+            <li><strong>Senior work, honest pricing.</strong> Retainers below typical US agency rates, delivered by our California team, the same people behind 175+ MAS Group projects.</li>
             <li><strong>Nothing to hide behind.</strong> The morning brief shows leads, spend, and results daily. If the work isn't performing, you'll know before we do.</li>
           </ul>
           <a href="https://agency.masconsultancy.org/" class="btn btn-primary" target="_blank" rel="noopener">Visit agency.masconsultancy.org &rarr;</a>
